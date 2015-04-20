@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Flexbox</title>
 	<style>
 		body{
 			background: : #fefefe;
@@ -25,9 +25,9 @@
 			border-radius: 3px;
 		}
 		.bl {
-			padding: 5px 10px;
+			padding: 10px;
 			border:  1px solid #ddd;
-			background: #fffde1;
+			background: #fefefe;
 			border-radius: 3px;
 			margin: 20px;
 		}
@@ -62,28 +62,94 @@
 			/*flex-basis: 10px;
 			flex-grow: 1;
 			flex-shrink: 1;*/
-			flex: 1 1 200px;
+			flex: 1 1 300px;
 			text-align: center;
 			/*height: 20px;
 			margin: auto;
 			height: 150px;*/
+			display: flex;
+			flex-flow: row wrap;
 		}
-		.fl1{background: #7cd2dd; order: 5; flex-basis: 300px; }
-		.fl2{background: #95d051; order: 2; flex-basis: 150px;}
-		.fl3{background: #3b9e65; order: 1; flex-basis: 100%;}
-		.fl4{background: #d051d0; order: 0; flex-basis: 100%;}
-		.fl5{background: #f2f26e; order: 6; flex-basis: 300px; }
-		.fl6{background: #eee; order: 3; flex-basis: 400px; flex-grow: 3; }
+		.fl1{flex: 1 1 100%;}
+		.fl2{}
+		.fl3{}
+		.fl4{}
+		.fl5{}
+		.fl6{flex: 1 1 100%;}
+
+		a.button{
+			background: #406cd0;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 2px;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+		a.button:hover {
+			background: #c70000;
+		}
+		h3{color:#406cd0; margin: 0 10px 0 0; font-size: 1.1em; }
+		.image{
+			margin: 10px;
+			flex: 1 1 200px;
+		}
+		.image img{width: 100%; height: auto; }
+		.text {
+			margin: 10px;
+			flex: 1 1 150px;
+		}
 	</style>
 </head>
 <body>
 	<div class="main">
-		<div class="bl fl1"><b>ПОДВАЛ 1</b><br>1 rem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nulla rerum, est dolor molestiae enim, sit repudiandae officia magnam, odit aliquam? Exercitationem nobis facilis possimus repellendus officiis a dolore aspernatur.</div>
-		<div class="bl fl2"><b>ЛЕВЫЙ САЙДБАР</b><br>2 rem ipsum dolor sit amet, consectetur adipisicing elit. Qui, unde expedita facere. Ipsum amet repudiandae est facere eum! Totam perspiciatis vitae velit voluptate repudiandae saepe maxime odio eligendi quia voluptatem.</div>
-		<div class="bl fl3"><b>МЕНЮ</b><br>3 rem ipsum dolor sit amet, consectetur adipisicing elit. Nulla culpa sunt voluptates? Voluptate quam cum possimus. Iusto labore unde nihil quas? Blanditiis consectetur obcaecati beatae cumque, soluta. Veritatis, eveniet, quaerat!</div>
-		<div class="bl fl4"><b>ШАПКА</b><br>4 rem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa consequuntur, eveniet similique obcaecati praesentium ducimus quia voluptas, doloremque mollitia dolorem, non optio tempore quidem amet libero repellendus eaque magnam.</div>
-		<div class="bl fl5"><b>ПОДВАЛ 2</b><br>5 rem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam commodi fugiat quod non facilis dolore aliquam quaerat dicta, quis, molestiae! Cumque veniam cupiditate necessitatibus culpa. Dolores nam hic, rem!</div>
-		<div class="bl fl6"><b>КОНТЕНТ</b><br>6 rem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam commodi fugiat quod non facilis dolore aliquam quaerat dicta, quis, molestiae! Cumque veniam cupiditate necessitatibus culpa. Dolores nam hic, rem!</div>
+		<div class="bl fl1">
+			<div class="image"><img src="images/cat1.jpg" alt=""></div>
+			<div class="text">
+				<h3>Lorem ipsum dolor.</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
+		<div class="bl fl2">
+			<div class="image"><img src="images/cat2.jpg" alt=""></div>
+			<div class="text">
+				<h3>Perspiciatis, nostrum, minima.</h3>
+				<p>Aut iusto exercitationem modi neque nam perspiciatis.</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
+		<div class="bl fl3">
+			<div class="image"><img src="images/cat3.jpg" alt=""></div>
+			<div class="text">
+				<h3>Dolorem, dolorum, totam.</h3>
+				<p>Consequatur quos doloribus magnam id a quae!</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
+		<div class="bl fl4">
+			<div class="image"><img src="images/cat4.jpg" alt=""></div>
+			<div class="text">
+				<h3>Dolorem nesciunt, eius!</h3>
+				<p>Repellendus mollitia minima, eum est sint quis.</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
+		<div class="bl fl5">
+			<div class="image"><img src="images/cat5.jpg" alt=""></div>
+			<div class="text">
+				<h3>Ipsum, rerum, non.</h3>
+				<p>Recusandae rem deserunt neque perferendis quo, excepturi.</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
+		<div class="bl fl6">
+			<div class="image"><img src="images/cat6.jpg" alt=""></div>
+			<div class="text">
+				<h3>Saepe, rem, soluta.</h3>
+				<p>Architecto repellendus, at reiciendis amet, deleniti nisi.</p>
+				<a href="#" class="button">Читать...</a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
